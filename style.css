@@ -1,0 +1,97 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: #6A395B;
+    
+}
+
+.card{
+    background-color: #E5BE9E;
+    flex: 0;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#month-bar, #year-bar{
+    background-color: #E1B07E;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    
+   
+}
+
+#year-bar{
+    border-radius:1.5rem 1.5rem 0 0;
+    justify-content: center;
+    padding-top: 0.3rem;
+    
+}
+
+#month-bar{
+    justify-content: space-around;
+    margin-top: -0.3rem;
+}
+
+#left, #right{
+    font-size: 25px;
+    
+}
+
+#month{
+    padding-top: 0.2rem;
+}
+
+
+h1{
+     color: #6A395B ;
+     font-size: 20px;
+     font-weight: 900;
+     margin: 0;
+     padding: 0;
+}
+
+.days{
+    display: flex;
+    gap: 0.5rem;
+       margin: 0.25rem 1rem -0.25rem 1rem;
+}
+
+.dayHead{
+    flex: 0;
+    color: #6A395B;
+    min-width: 2rem;
+    max-width: 2rem;
+    min-height: 2rem;
+    max-height: 2rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
+.day{
+    background-color: #E1B07E;
+    min-width: 2rem;
+    max-width: 2rem;
+    min-height: 2rem;
+    max-height: 2rem;
+}
+
+.weeks{
+    display: flex;
+    gap: 0.5rem;
+    margin: 0rem 1rem 0.5rem 1rem;
+}
+
+#week1{
+    margin-top: 0;
+}
+
+#week6{
+    margin-bottom: 1rem;
+}
