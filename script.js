@@ -54,19 +54,23 @@ function setDayDivs(settingDate){
     }
 }
 
-setHeaders(pageDate.getFullYear(), pageDate.getMonth());
-setDayDivs(pageDate);
-
-leftButton.addEventListener('click', () =>{
+function monthDown(){
     pageDate.setMonth(pageDate.getMonth()-1);
     setHeaders(pageDate.getFullYear(), pageDate.getMonth());
     setDayDivs(pageDate);
-})
+}
 
-rightButton.addEventListener('click', () =>{
+function monthUp(){
     pageDate.setMonth(pageDate.getMonth()+1);
     setHeaders(pageDate.getFullYear(), pageDate.getMonth());
     setDayDivs(pageDate);
-})
+}
 
+setHeaders(pageDate.getFullYear(), pageDate.getMonth());
+setDayDivs(pageDate);
+
+leftButton.addEventListener('click', monthDown);
+rightButton.addEventListener('click', monthUp);
+leftButton.addEventListener('touchstart', monthDown);
+rightButton.addEventListener('touchstart', monthUp); 
 
