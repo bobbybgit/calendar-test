@@ -63,7 +63,7 @@ leftButton.addEventListener('touchstart click', () =>{
     setDayDivs(pageDate);
 })
 
-rightButton.addEventListener('click', () =>{
+rightButton.addEventListener('touchstart click', () =>{
     pageDate.setMonth(pageDate.getMonth()+1);
     setHeaders(pageDate.getFullYear(), pageDate.getMonth());
     setDayDivs(pageDate);
