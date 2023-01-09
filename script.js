@@ -6,6 +6,9 @@ const monthTitle = document.querySelector('#month');
 
 const dayDivs = document.querySelectorAll('.day');  
 
+const leftButton = document.querySelector('#left');
+const rightButton = document.querySelector('#right');
+
 function monthToString(month){
     switch (month){
         case 0: return "January"
@@ -44,7 +47,7 @@ function setDayDivs(settingDate){
             dayDivs[i].innerText = "";
             dayDivs[i].style['background-color'] = "#FFFFFF";
         }else{
-            dayDivs[i].innerText = i+1;
+            dayDivs[i].innerText = i+1-settingDate.getDay();
             dayDivs[i].style['background-color'] = "#FFD685";
         }
         proxFirstDay++
@@ -53,5 +56,17 @@ function setDayDivs(settingDate){
 
 setHeaders(pageDate.getFullYear(), pageDate.getMonth());
 setDayDivs(pageDate);
+
+leftButton.addEventListener('click', () =>{
+    pageDate.setMonth(pageDate.getMonth()-1);
+    setHeaders(pageDate.getFullYear(), pageDate.getMonth());
+    setDayDivs(pageDate);
+})
+
+rightButton.addEventListener('click', () =>{
+    pageDate.setMonth(pageDate.getMonth()+1);
+    setHeaders(pageDate.getFullYear(), pageDate.getMonth());
+    setDayDivs(pageDate);
+})
 
 

@@ -81,6 +81,9 @@ h1{
     max-width: 2rem;
     min-height: 2rem;
     max-height: 2rem;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 12px;
 }
 
 .weeks{
